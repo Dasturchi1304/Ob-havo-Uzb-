@@ -1,0 +1,159 @@
+/* ===== Ranglar (yorug' va qorong'u rejim) ===== */
+:root {
+  --fon: #eef3fb;
+  --yuza: #ffffff;
+  --matn: #1b2434;
+  --matn-och: #6b7a90;
+  --asosiy: #3b82f6;
+  --soya: 0 4px 16px rgba(30, 60, 120, 0.12);
+}
+
+body.qorongi {
+  --fon: #0f1626;
+  --yuza: #1a2338;
+  --matn: #e8eefc;
+  --matn-och: #93a1bd;
+  --asosiy: #60a5fa;
+  --soya: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Umumiy ===== */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fon);
+  color: var(--matn);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+button {
+  font: inherit;
+  color: var(--matn);
+  cursor: pointer;
+}
+
+#temaTugma,
+#orqagaTugma {
+  background: var(--yuza);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: var(--soya);
+}
+
+#orqagaTugma {
+  margin-bottom: 16px;
+}
+
+/* ===== Viloyat kartochkalari ===== */
+#viloyatlar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.kartochka {
+  background: var(--yuza);
+  border: none;
+  border-radius: 16px;
+  padding: 24px 12px;
+  font-weight: 600;
+  box-shadow: var(--soya);
+  transition: transform 0.2s;
+}
+
+.kartochka:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Ob-havo ma'lumoti ===== */
+#hududNomi {
+  margin: 0 0 16px;
+}
+
+#hozirgi,
+#havoSifati {
+  background: var(--yuza);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: var(--soya);
+}
+
+.katta-harorat {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--asosiy);
+}
+
+.och-matn {
+  color: var(--matn-och);
+}
+
+/* ===== 7 kunlik prognoz ===== */
+#prognoz {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.kun {
+  background: var(--yuza);
+  border-radius: 16px;
+  padding: 16px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: var(--soya);
+}
+
+/* ===== Xabarlar ===== */
+#yuklanmoqda,
+#xato {
+  text-align: center;
+  padding: 24px;
+}
+
+#xato {
+  color: #e5484d;
+}
+
+/* ===== Telefon uchun ===== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  #viloyatlar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

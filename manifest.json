@@ -1,0 +1,15 @@
+{
+  "name": "O'zbekiston ob-havosi",
+  "short_name": "Ob-havo",
+  "description": "O'zbekiston viloyatlari ob-havosi",
+  "lang": "uz",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef3fb",
+  "theme_color": "#3b82f6",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

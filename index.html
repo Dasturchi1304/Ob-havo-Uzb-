@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3b82f6">
+  <title>O'zbekiston ob-havosi</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="logo.svg" alt="Ob-havo logotipi" width="44" height="44">
+      <h1>O'zbekiston ob-havosi</h1>
+    </div>
+    <button id="temaTugma">🌙</button>
+  </header>
+
+  <main>
+    <section id="viloyatlar"></section>
+
+    <section id="malumot" hidden>
+      <button id="orqagaTugma">← Orqaga</button>
+      <h2 id="hududNomi"></h2>
+      <div id="hozirgi"></div>
+      <div id="havoSifati"></div>
+      <div id="prognoz"></div>
+    </section>
+
+    <p id="yuklanmoqda" hidden>Yuklanmoqda...</p>
+    <p id="xato" hidden></p>
+  </main>
+
+  <footer style="text-align: center; padding: 20px; font-size: 0.85rem; opacity: 0.7;">
+    Ma'lumot manbai: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>
+  </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
+</body>
+</html>
